@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: green;
+  display: flex;
+  text-align: center;
+  padding: 15px 0;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+header a {
+  color: aliceblue;
+}
+#menu {
+  padding: 10px;
+}
+
+#logo {
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 45px;
+}
+#social a,
+#menu a {
+  padding: 10px;
+  font-size: 160%;
+}
+#social li,
+#menu li {
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+}
+.service-container {
+  display: flex;
+  justify-content: space-between;
+}
+.service-box {
+  border: 2px solid rgb(11, 2, 2);
+  padding: 10px;
+  flex-basis: 32%; /* width of service box */
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  box-shadow: 0 0 1px 2px ;
+}
+.service-box img {
+  width: 100%; /* 100 % its depend on parent so here is parent service box */
+  max-height:250px ;
+  /* background-position: center;
+  background-size: cover; */
+}
+#menu-content {
+  display: flex;
+}
+aside {
+  /* flex-basis: 30vw; */
+  flex: 0 0 20vw;
+  background: #a6d306;
+  padding: 10px;
+}
+aside img {
+  width: 100%;
+}
+footer{
+  
+  position: relative;
+  top: 200px;
+  margin: 15px 0 10px;
+  background: #000;
+  color: rgb(15, 254, 59);
+  text-align: center;
+  padding: 15px;
+}
+article {
+  padding: 10px;
+}
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul a {
+  color: green;
+  padding: 10px;
+  display: block; /* for apply padding , margin we have to make flex to block bcz of text content */
+  border-bottom: 1px solid grey;
+}
+.call-to-action{
+  align-self: flex-start;
+  margin-top: auto;
+}
+.call-to-action a{
+  background: #03600c;
+  color: lightgrey;
+  padding: 15px 30px;
+  display: block;
+  font-size: 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition:  0.3s ease-in;
+}
+
+.call-to-action a:hover{
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #06cd4c;
+  color: black;
+  font-weight: 800;
+  transition:  all 0.5s linear;
+}
+.service-box:hover{
+  box-shadow: 0 0 1px 2px  ;
+  border-radius: 5%;
+  transform: scale(1.1,1.0); 
+  transition: all 0.3s ease-out;
+  font-size: 20px;
+}
+.service-box h3{
+  margin: 5px 0 10px;/* top left+right bottom */
+}
+.service-box p{
+  margin: 0 auto 10px;
+}
