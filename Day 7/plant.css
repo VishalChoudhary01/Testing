@@ -1,0 +1,40 @@
+:root{
+    --background:rgba(228, 246, 138, 0.729);
+    --button-theme:rgba(7, 119, 7, 0.727);
+    --button-font-color:rgba(255, 255, 255, 0.737);
+    --offer-button-color:rgba(255, 0, 0, 0.801);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    width:1500px;
+    height:120vh;
+    background-color: var(--background);
+    margin: 0 auto;
+}
+.nav-menu{
+    align-self: center;
+}
+.nav-menu .logo img{
+    width:10vw;
+    height:10vh;
+   margin:10px auto;
+
+}
+.hamburger-menu .bar{
+    width:10px;
+    height:5px;
+    background: #000;
+    /* margin: 2px auto; */
+    
+
+}
+.nav-menu{
+    display: grid;
+
+}

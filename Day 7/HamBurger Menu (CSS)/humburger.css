@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5px;
+    background-image: url(images/calm-body-of-water-Flip.jpg);
+    background-position:center;
+    
+    background-size: cover;
+}
+.logo{
+    font-size: 30px;
+    padding: 40px;
+}
+.navigation{
+    position: relative;
+
+}
+.nav-checkbox{
+    display: none;
+}
+.nav-button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 2000;
+    box-shadow: 0 40px 510px rgba(251, 13, 13, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ;
+    
+}
+.nav-background{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: radial-gradient(#4c0563,#003494);
+    position: fixed;
+    top: 45px;
+    right: 45px;
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.86,0,0.07,1);
+}
+.nav-bar{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg,#7f5a83 0%,#15598a,74% );
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.86,0,0.07,1);
+}
+.nav-list{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+
+
+}
+.menu{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.menu:hover{
+    color: #a275f7;
+    transform: translateX(10px);
+}
+.nav-checkbox:checked~.nav-background{
+    transform: scale(1.6);
+    
+
+}
+.nav-checkbox:checked~.nav-bar{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.nav-icon{
+    position: relative;
+    margin-top:35px;
+    
+}
+.nav-icon,.nav-icon::before,.nav-icon::after{
+    width: 40px;
+    height: 3px;
+    background: black;
+    display: inline-block;
+}
+.nav-icon::before,.nav-icon::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+.nav-icon::before{
+    top: -10px;
+}
+.nav-icon::after{
+    top: 10px;
+
+}
+.nav-button:hover .nav-icon::before{
+    top: -12px;
+}
+.nav-button:hover .nav-icon::after{
+    top: 12px;
+}
+.nav-checkbox:checked + .nav-button .nav-icon{
+    background: transparent;
+}
+.nav-checkbox:checked + .nav-button .nav-icon::before{
+    top: 0;
+    transform: rotate(135deg);
+    
+}
+.nav-checkbox:checked + .nav-button .nav-icon::after{
+    top: 0;
+    transform: rotate(-135deg);
+
+}
